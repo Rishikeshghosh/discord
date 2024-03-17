@@ -3,8 +3,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
   try {
-    let room = req.nextUrl.searchParams.get("room");
-    const username = req.nextUrl.searchParams.get("username");
+    const room = req.nextUrl?.searchParams?.get("room");
+    const username = req.nextUrl?.searchParams?.get("username");
 
     if (!room) {
       return NextResponse.json(
